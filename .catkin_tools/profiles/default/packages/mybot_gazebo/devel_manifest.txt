@@ -1,0 +1,4 @@
+mybot_gazebo
+/home/thangbm/Study/mybot_ws/devel/.private/mybot_gazebo/share/mybot_gazebo/cmake/mybot_gazeboConfig-version.cmake /home/thangbm/Study/mybot_ws/devel/share/mybot_gazebo/cmake/mybot_gazeboConfig-version.cmake
+/home/thangbm/Study/mybot_ws/devel/.private/mybot_gazebo/share/mybot_gazebo/cmake/mybot_gazeboConfig.cmake /home/thangbm/Study/mybot_ws/devel/share/mybot_gazebo/cmake/mybot_gazeboConfig.cmake
+/home/thangbm/Study/mybot_ws/devel/.private/mybot_gazebo/lib/pkgconfig/mybot_gazebo.pc /home/thangbm/Study/mybot_ws/devel/lib/pkgconfig/mybot_gazebo.pc
