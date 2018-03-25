@@ -5,6 +5,7 @@ import cv2
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
+import time
 
 class TakePhoto:
     def __init__(self):
@@ -33,6 +34,7 @@ class TakePhoto:
     def take_picture(self, img_title):
         if self.image_received:
             # Save an image
+            self.image = cv2.resize(self.image, (64, 64))
             cv2.imwrite(img_title, self.image)
             return True
         else:
@@ -49,11 +51,14 @@ if __name__ == '__main__':
     # Use '_image_title' parameter from command line
     # Default value is 'photo.jpg'
     img_title = rospy.get_param('~image_title', 'photo.jpg')
-
-    if camera.take_picture(img_title):
+    count = 0
+    # while True:
+    #     count += 1
+    if camera.take_picture(img_title + " " + str(count)):
         rospy.loginfo("Saved image " + img_title)
     else:
         rospy.loginfo("No images received")
+        # time.sleep(5)
 
     # Sleep to give the last log messages time to be sent
     rospy.sleep(1)

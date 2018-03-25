@@ -121,7 +121,7 @@ if __name__=="__main__":
 
             twist = Twist()
             twist.linear.x = control_speed; twist.linear.y = 0; twist.linear.z = 0
-            twist.angular.x = 0; twist.angular.y = 0; twist.angular.z = control_turn
+            twist.angular.x = 0; twist.angular.y = 0; twist.angular.z = control_turn / 2
             pub.publish(twist)
 
             #print("loop: {0}".format(count))
